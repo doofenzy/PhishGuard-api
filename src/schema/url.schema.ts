@@ -7,8 +7,8 @@ export class Url extends Document {
   @Prop({ required: true, unique: true })
   url: string;
 
-  @Prop({ required: true, unique: true })
-  status: boolean;
+  @Prop()
+  status: string;
 
   @Prop({ type: Types.ObjectId, required: true })
   createdBy: Types.ObjectId | User;

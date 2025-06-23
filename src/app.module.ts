@@ -3,6 +3,7 @@ import { AuthModule } from './auth/auth.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
+import { UrlModule } from './url/url.module';
 import config from './config/config';
 
 @Module({
@@ -29,6 +30,7 @@ import config from './config/config';
       inject: [ConfigService],
     }),
     AuthModule,
+    UrlModule,
   ],
   controllers: [],
   providers: [],
